@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia - Dream XV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap');
+        
+        .font-cursive { font-family: 'Great Vibes', cursive; }
+        .font-title { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#FCF9F8] text-[#2A1E1D] font-sans min-h-screen flex flex-col relative">
+
+    <header class="flex justify-between items-start md:items-center p-6 md:px-16 w-full relative z-30">
+        
+        <a href="index.html" class="flex items-center gap-2 text-xs md:text-sm tracking-widest uppercase hover:text-[#44a0cf] transition-colors w-24">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
+            Volver
+        </a>
+
+        <div class="flex items-center gap-4 w-24 justify-end ml-auto">
+            <button class="hidden md:flex items-center gap-2 text-xs tracking-widest uppercase hover:text-[#44a0cf] transition-colors">
+                <svg class="w-4 h-4 text-[#44a0cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                Música
+            </button>
+            <div id="btnMenu" class="cursor-pointer text-[#44a0cf] hover:text-[#D6687C] transition-colors z-40">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
+        </div>
+    </header>
+
+    <div id="menuMovil" class="fixed inset-0 bg-[#44a0cf]/95 backdrop-blur-md z-20 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase text-center">
+            <a href="index.html" class="hover:text-[#44a0cf] transition-colors">Inicio</a>
+            <a href="galeria.html" class="hover:text-[#44a0cf] transition-colors">Galería</a>
+            <a href="videos.html" class="hover:text-[#44a0cf] transition-colors">Videos</a>
+            <a href="historia.html" class="text-[#2724e0]">Historia</a>
+            <a href="mensajes.html" class="hover:text-[#44a0cf] transition-colors">Mensaje</a>
+        </nav>
+    </div>
+
+    <main class="w-full px-6 md:px-16 pb-20 flex-1 relative z-10 max-w-5xl mx-auto mt-4 md:mt-0">
+        
+        <div class="text-center mb-16 md:mb-24 flex flex-col items-center">
+            <p class="text-xs md:text-sm tracking-[0.3em] uppercase font-light opacity-70 mb-2">La Historia de</p>
+            <h1 class="text-7xl md:text-[120px] font-cursive text-[#44a0cf] leading-none mb-6">Lorena Isabel</h1>
+            <div class="w-16 h-[1px] bg-[#2A1E1D]/20 mb-6"></div>
+            <p class="text-sm md:text-base font-light max-w-2xl text-center leading-relaxed opacity-80">
+                "Hay momentos en la vida que imaginamos desde que somos pequeños. Hoy, uno de esos sueños se hace realidad. Acompáñame a revivir los capítulos que me trajeron hasta este gran día."
+            </p>
+        </div>
+
+        <div class="flex flex-col gap-16 md:gap-24">
+            
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <div class="w-full md:w-1/2 relative group">
+                    <div class="absolute inset-0 bg-[#44a0cf]/10 transform translate-x-4 translate-y-4 rounded-xl"></div>
+                    <img src="IMG/Fotografo/Lorena I-05.jpg" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-lg grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+                    <span class="text-[#44a0cf] font-title text-xl italic mb-2">Fotografo</span>
+                    <h2 class="text-2xl md:text-4xl font-title mb-4">Lazos Inquebrantables</h2>
+                    <p class="text-sm leading-relaxed font-light opacity-80">
+                        Desde siempre, mi camino ha estado iluminado por la complicidad, las risas y el amor incondicional de las mujeres de mi vida. Cada abrazo compartido me ha dado la fuerza para crecer y brillar. Hoy celebro este momento tan especial sabiendo que mi familia es, y siempre será, mi mayor tesoro.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
+                <div class="w-full md:w-1/2 relative group">
+                    <div class="absolute inset-0 bg-[#44a0cf]/10 transform -translate-x-4 translate-y-4 rounded-xl"></div>
+                    <img src="IMG/Handhels/IMG_20250510_001 (5).jpg" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-lg grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-right">
+                    <span class="text-[#44a0cf] font-title text-xl italic mb-2">Handhels</span>
+                    <h2 class="text-2xl md:text-4xl font-title mb-4">Caminando Juntas</h2>
+                    <p class="text-sm leading-relaxed font-light opacity-80">
+                        En cada etapa de mi vida, he tenido la fortuna de estar rodeada de luz, risas y amistades que se sienten como hermanas. Caminar hacia este momento tan mágico no sería igual sin ustedes a mi lado, llenando de color y alegría este nuevo capítulo que hoy comienza.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <div class="w-full md:w-1/2 relative group">
+                    <div class="absolute inset-0 bg-[#44a0cf]/10 transform translate-x-4 translate-y-4 rounded-xl"></div>
+                    <img src="IMG/Lorainne 1/IMG_20250511 (1).jpg" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-lg grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left">
+                    <span class="text-[#44a0cf] font-title text-xl italic mb-2">Loraine 1</span>
+                    <h2 class="text-2xl md:text-4xl font-title mb-4">Mirando al Horizonte</h2>
+                    <p class="text-sm leading-relaxed font-light opacity-80">
+                        Todo lo que aprendí desde mis primeros pasos me ha traído hasta aquí. Hoy, contemplando lo que está por venir, abrazo este nuevo capítulo de mi vida, lista para escribir mi propia historia con la misma ilusión y grandeza de los sueños que me trajeron a este momento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-16">
+                <div class="w-full md:w-1/2 relative group">
+                    <div class="absolute inset-0 bg-[#44a0cf]/10 transform -translate-x-4 translate-y-4 rounded-xl"></div>
+                    <img src="IMG/Lorainne 2/IMG-20250510 (2).jpg" class="relative z-10 w-full h-80 object-cover rounded-xl shadow-lg grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col justify-center text-center md:text-right">
+                    <span class="text-[#44a0cf] font-title text-xl italic mb-2">Loraine 2</span>
+                    <h2 class="text-2xl md:text-4xl font-title mb-4">Un Camino con Corazón</h2>
+                    <p class="text-sm leading-relaxed font-light opacity-80">
+                        Así como mis primeros pasos estuvieron llenos de juegos y cariño, hoy mi camino está enmarcado por la alegría y la compañía incondicional de mis hermanas. Ellas son el reflejo del amor que me rodea, convirtiendo esta nueva etapa en una aventura que guardaré por siempre en mi corazón.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="md:hidden fixed bottom-6 right-6 z-10">
+        <button class="bg-[#44a0cf] text-white p-4 rounded-full shadow-lg shadow-[#44a0cf]/40">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+        </button>
+    </div>
+
+    <script>
+        const btnMenu = document.getElementById('btnMenu');
+        const menuMovil = document.getElementById('menuMovil');
+        let menuAbierto = false;
+
+        btnMenu.addEventListener('click', () => {
+            menuAbierto = !menuAbierto;
+            if (menuAbierto) {
+                menuMovil.classList.remove('opacity-0', 'pointer-events-none');
+                btnMenu.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>';
+            } else {
+                menuMovil.classList.add('opacity-0', 'pointer-events-none');
+                btnMenu.innerHTML = '<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>';
+            }
+        });
+    </script>
+</body>
+</html>

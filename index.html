@@ -1,245 +1,121 @@
 <!DOCTYPE html>
-<html lang="DO">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lorena | Mis 15 Años</title>
-  <link rel="stylesheet" href="estilos.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream XV - Valentina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Importamos las fuentes: Great Vibes para el nombre, Montserrat para lo demás */
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap');
+        
+        .font-cursive { font-family: 'Great Vibes', cursive; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+        
+        /* Animación para la flecha indicadora de scroll */
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        .animate-bounce-slow { animation: bounce-slow 2s infinite; }
+    </style>
 </head>
-<body>
-  <section class="portada">
-    <div class="contenido-portada">
-      <h1>Lorena Isabel Diaz Rodriguez</h1>
-    <h2>• 15 Años •</h2>
-      <p>Un momento para siempre</p>
+<body class="bg-[#2A1E1D] text-white font-sans h-screen flex flex-col overflow-hidden relative">
+
+    <div class="absolute inset-0 z-0 bg-gradient-to-r from-black/60 to-[#4a2e2a]/80">
+        <img src="IMG/Fotografo/Lorena I-01.jpg" 
+             alt="Fondo Lorena" 
+             class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60">
     </div>
-  </section>
 
-  <section class="galeria">
+    <header class="flex justify-between items-center p-6 md:px-16 absolute w-full z-30 top-0">
+        <div class="flex items-center gap-2 cursor-pointer z-40">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <span class="text-sm md:text-base tracking-[0.15em] font-light">Dreams XV</span>
+        </div>
+        
+        <nav class="hidden md:flex gap-8 text-[11px] md:text-xs tracking-widest uppercase z-40">
+            <a href="index.html" class="hover:text-[#44a0cf] transition-colors">Inicio</a>
+            <a href="galeria.html" class="hover:text-[#44a0cf] transition-colors">Galería</a>
+            <a href="videos.html" class="hover:text-[#44a0cf] transition-colors">Videos</a>
+            <a href="historia.html" class="hover:text-[#44a0cf] transition-colors">Historia</a>
+            <a href="mensajes.html" class="hover:text-[#44a0cf] transition-colors">Mensaje</a>
+        </nav>
 
-    <p>Fotografo</p>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-01.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-02.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-03.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-04.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-05.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-06.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-07.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-08.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-09.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-10.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-11.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-12.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-13.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-14.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-15.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-16.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-17.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-18.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-19.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-20.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-21.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-22.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-23.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-24.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-25.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-26.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-27.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-28.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-29.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-30.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-31.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-32.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-33.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-34.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-35.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-36.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-37.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-38.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-39.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-40.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-41.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-42.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-43.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-44.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-45.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-46.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-47.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-48.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-49.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-50.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-51.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-52.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-53.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-54.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-55.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-56.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-57.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-58.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-59.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-60.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-61.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-62.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-63.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-64.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-65.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-66.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-67.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-68.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-69.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-70.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-71.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-72.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-73.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-74.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-75.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-76.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-77.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-78.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-79.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-80.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-81.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-82.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Fotografo/Lorena I-83.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>    
+        <div id="btnMenu" class="md:hidden cursor-pointer z-40">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </div>
+    </header>
 
-    <p>Bloque 2</p>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG-20250512-WA0028.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_155839.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160106.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160121_1.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160123.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160131.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160132.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160136.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160152.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160205.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160208.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160226.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160232.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160234.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160247.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160250.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160334.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160343.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160350.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160405.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160406.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160407.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160408.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160412.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160413.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160422.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160423.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160426.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160428.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160440_1.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160447_1.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160449.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160514.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160518.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160528.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160530.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160534.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160554.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160617.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160621.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160623.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160628.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160630.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160632.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160633.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160734.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160841.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160912.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160915.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160920.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160943.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160952.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_160956.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161008.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161012.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161022.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161026.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161114.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161117.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161120.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161124.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161127.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161139.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161141.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161149.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161157.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161300.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161308.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161318.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161326.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161342.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161343.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161351.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161353.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161413.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_161414.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162044.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162101.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162104.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162105.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162250.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162257.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162303.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162304.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162324.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162332.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 1/IMG_20250511_162336.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
+    <div id="menuMovil" class="fixed inset-0 bg-[#44a0cf]/95 backdrop-blur-md z-20 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase text-center">
+            <a href="index.html" class="text-[#2724e0]">Inicio</a>
+            <a href="galeria.html" class="hover:text-[#44a0cf] transition-colors">Galería</a>
+            <a href="videos.html" class="hover:text-[#44a0cf] transition-colors">Videos</a>
+            <a href="historia.html" class="hover:text-[#44a0cf] transition-colors">Historia</a>
+            <a href="mensajes.html" class="hover:text-[#44a0cf] transition-colors">Mensaje</a>
+        </nav>
+    </div>
 
-<p>Bloque 3</p>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0103.jpg" alt="Foto 2" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0104.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0105.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0106.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0107.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0108.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0111.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0112.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0118.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0121.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0122.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0123.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0124.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0128.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0129.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0136.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0151.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0149.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0131.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/Lorena I-83.jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Lorainne 2/IMG-20250510-WA0081.jpg" alt="Foto 1" onclick="mostrarImagen(this.src)"></div>
+    <main class="relative z-10 h-full flex flex-col justify-center items-center md:items-end w-full px-6 md:px-24">
+        
+        <div class="flex flex-col items-center text-center md:w-1/2 mt-12 md:mt-0">
+            <svg class="w-8 h-8 mb-3 opacity-90 text-[#44a0cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            
+            <h2 class="text-sm md:text-lg tracking-[0.25em] font-light mb-0 md:mb-2 opacity-90 uppercase">Mis 15 Años</h2>
+            
+            <h1 class="text-7xl md:text-[110px] font-cursive text-white mb-2 leading-tight" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.4);">
+                Lorena Isabel
+            </h1>
+            
+            <div class="flex items-center gap-3 mb-4 opacity-70">
+                <span class="w-8 h-[1px] bg-white"></span>
+                <svg class="w-3 h-3 text-white fill-current" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                <span class="w-8 h-[1px] bg-white"></span>
+            </div>
+            
+            <p class="text-xs md:text-sm tracking-[0.2em] mb-8 font-light opacity-90 uppercase">26 de Mayo, 2025</p>
+            
+            <a href="galeria.html" class="bg-[#44a0cf] hover:bg-[#2724e0] text-white px-7 py-2.5 rounded-md text-xs md:text-sm tracking-widest transition-all shadow-lg inline-flex items-center gap-2 font-medium uppercase w-fit">
+                Entrar al Álbum
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
+        </div>
 
-<p>Handhels</p>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (1).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (2).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (3).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (4).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (5).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (6).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (7).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (8).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (9).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (10).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (11).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <div class="foto"><img src="IMG/Handhels/IMG_20250510_001 (12).jpg" alt="Foto 3" onclick="mostrarImagen(this.src)"></div>
-    <!-- Agrega más imágenes aquí -->
-  </section>
+    </main>
 
-  <div id="lightbox" class="lightbox" onclick="cerrarImagen()">
-    <span class="cerrar">&times;</span>
-    <img id="imagen-grande" src="" alt="Imagen Ampliada">
-  </div>
+    <footer class="mt-auto border-t border-white/5 bg-slate-900/50 backdrop-blur-md py-6 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <div class="text-center md:text-left">
+                <p class="text-sm text-slate-400">
+                    &copy; 2026 
+                    <a href="https://lorhels.web.app" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-bold transition-colors">
+                        LorHels Systems
+                    </a>. 
+                    <span class="hidden sm:inline">Todos los derechos reservados.</span>
+                </p>
+                <p class="text-xs text-slate-500 mt-1.5 flex items-center justify-center md:justify-start gap-1.5">
+                    Desarrollado con <i data-lucide="heart" class="w-3 h-3 text-rose-500 fill-rose-500 animate-pulse"></i> para brindar las mejores soluciones.
+                </p>
+            </div>
+            
+            <div class="flex items-center gap-5 text-slate-500">
+                <a href="#" class="hover:text-blue-400 transition-colors hover:scale-110 transform" title="Instagram">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="#" class="hover:text-blue-400 transition-colors hover:scale-110 transform" title="LinkedIn">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="mailto:lorhels-systems@handhelsinc.net" class="hover:text-blue-400 transition-colors hover:scale-110 transform" title="Correo">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 Sesión de Fotos - Lorena Isabel Diaz Rodriguez</p>
-    <p>Handhels Inc - WS: 1 (829) 913-5723</p>
-  </footer>
+        </div>
+    </footer>   
 
-  <script src="script.js"></script>
+    <script src="movil.js"></script>
+
 </body>
 </html>

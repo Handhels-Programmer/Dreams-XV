@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Dream XV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap');
+        
+        .font-title { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Animación suave para cuando las fotos aparecen/desaparecen */
+        .galeria-item {
+            transition: all 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-[#FCF9F8] text-[#2A1E1D] font-sans min-h-screen flex flex-col relative">
+
+    <header class="flex justify-between items-start md:items-center p-6 md:px-16 w-full relative z-30">
+        
+        <a href="index.html" class="flex items-center gap-2 text-xs md:text-sm tracking-widest uppercase hover:text-[#44a0cf] transition-colors w-24">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path></svg>
+            Volver
+        </a>
+
+        <div class="text-center flex-1 mt-2 md:mt-0">
+            <h1 class="text-3xl md:text-5xl font-title mb-2">Galería</h1>
+            <p class="text-[10px] md:text-xs tracking-[0.15em] uppercase font-light opacity-70">Revive cada momento especial</p>
+        </div>
+
+        <div class="flex items-center gap-4 w-24 justify-end">
+            <button class="hidden md:flex items-center gap-2 text-xs tracking-widest uppercase hover:text-[#44a0cf] transition-colors">
+                <svg class="w-4 h-4 text-[#44a0cf]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                Música
+            </button>
+            
+            <div id="btnMenu" class="cursor-pointer text-[#44a0cf] hover:text-[#44a0cf] transition-colors z-40">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
+        </div>
+    </header>
+
+    <div id="menuMovil" class="fixed inset-0 bg-[#44a0cf]/95 backdrop-blur-md z-20 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <nav class="flex flex-col gap-8 text-sm tracking-[0.2em] uppercase text-center">
+            <a href="index.html" class="hover:text-[#44a0cf] transition-colors">Inicio</a>
+            <a href="galeria.html" class="text-[#2724e0]">Galería</a>
+            <a href="videos.html" class="hover:text-[#44a0cf] transition-colors">Videos</a>
+            <a href="historia.html" class="hover:text-[#44a0cf] transition-colors">Historia</a>
+            <a href="mensajes.html" class="hover:text-[#44a0cf] transition-colors">Mensaje</a>
+        </nav>
+    </div>
+
+    <section class="w-full px-6 md:px-16 mt-6 mb-10 relative z-10">
+        <div class="flex gap-3 md:justify-center overflow-x-auto no-scrollbar pb-2" id="contenedor-filtros">
+            <button data-target="todos" class="btn-filtro bg-[#44a0cf] text-white px-5 py-2 rounded-full text-[10px] md:text-xs tracking-widest uppercase whitespace-nowrap shadow-md transition-all">Todos</button>
+            <button data-target="Fotografo" class="btn-filtro bg-transparent border border-[#44a0cf]/30 text-[#2A1E1D]/70 hover:border-[#44a0cf] hover:text-[#44a0cf] px-5 py-2 rounded-full text-[10px] md:text-xs tracking-widest uppercase whitespace-nowrap transition-all">Fotografo</button>
+            <button data-target="Handhels" class="btn-filtro bg-transparent border border-[#44a0cf]/30 text-[#2A1E1D]/70 hover:border-[#44a0cf] hover:text-[#44a0cf] px-5 py-2 rounded-full text-[10px] md:text-xs tracking-widest uppercase whitespace-nowrap transition-all">Handhels</button>
+            <button data-target="Loraine 1" class="btn-filtro bg-transparent border border-[#44a0cf]/30 text-[#2A1E1D]/70 hover:border-[#44a0cf] hover:text-[#44a0cf] px-5 py-2 rounded-full text-[10px] md:text-xs tracking-widest uppercase whitespace-nowrap transition-all">Loraine 1</button>
+            <button data-target="Loraine 2" class="btn-filtro bg-transparent border border-[#44a0cf]/30 text-[#2A1E1D]/70 hover:border-[#44a0cf] hover:text-[#44a0cf] px-5 py-2 rounded-full text-[10px] md:text-xs tracking-widest uppercase whitespace-nowrap transition-all">Loraine 2</button>
+        </div>
+    </section>
+
+    <main class="w-full px-6 md:px-16 pb-16 flex-1 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6" id="galeria-grid">
+            
+        </div>
+    </main>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+        <button id="btnCerrarLightbox" class="absolute top-6 right-6 md:top-8 md:right-8 text-white/50 hover:text-white transition-colors z-20 hover:rotate-90 transform duration-300">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        
+        <div class="flex flex-col items-center max-w-full relative z-10">
+            <img id="lightboxImg" src="" alt="Foto ampliada" class="max-w-full max-h-[80vh] object-contain rounded-sm shadow-2xl scale-95 transition-transform duration-300">
+            <p id="lightboxCaption" class="text-white/90 text-sm md:text-base tracking-[0.2em] uppercase mt-6 opacity-0 transition-opacity duration-300 font-light text-center px-4"></p>
+        </div>
+    </div>
+
+    <div class="md:hidden fixed bottom-6 right-6 z-10">
+        <button class="bg-[#E87A8F] text-white p-4 rounded-full shadow-lg shadow-[#E87A8F]/40 hover:scale-105 transition-transform">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+        </button>
+    </div>
+
+    <script src="galeria.js"></script>
+
+    <script src="movil.js"></script>
+
+    <script src="filtro.js"></script>
+
+    <script src="foto.js"></script>
+</body>
+</html>
